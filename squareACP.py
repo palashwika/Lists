@@ -1,29 +1,25 @@
-num=input("Enter two numbers for a range with space in between ")
-num_list=num.split()
+numlist=int(input("Enter the lowest value for a range: "))
+numlist2=int(input("Enter the highest value for a range:"))
+limit=range(numlist,numlist2+1)
+
+squarelist=[]
+for i in limit:
+   square=i**2
+   squarelist.append(square)
+print("The square values are: ",squarelist) 
+
+even=[]
+odd=[]
+for i in squarelist:
+    if i%2==0:
+       even.append(i)
+    else:
+       odd.append(i) 
+print("The even numbers in this square value list are ", even)
+print("The odd numbers in this square value list are ", odd)
 
 
-if len(num_list)==2:
-    start=int(num_list[0])
-    stop=int(num_list[1])
 
-    square=[]
-    sq=[]
-    odd=[]  
-    even=[] 
-    for i in range(start,stop+1):
-        square=i**2 #begins storing values
-        sq.append(square) #appends values wtihout overriding
-
-        for i in sq:
-            if i%2==0:
-                even.append(i)
-            else:
-                odd.append(i)
-
-print("The even numbers are ", even)
-print("The odd numbers are ", odd)
-
-    
 
 
     
